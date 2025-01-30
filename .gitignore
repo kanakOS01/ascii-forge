@@ -1,3 +1,46 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
 venv/
+.env/
+.venv/
+
+# Distribution / packaging
+build/
+dist/
 *.egg-info/
+*.egg
+*.manifest
+*.spec
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre
+.pyre/
+
+# Testing
+.tox/
+.nox/
+
+# VS Code
+.vscode/
+.vscode-test/
+
+# PyCharm
+.idea/
+*.iml
+
+# macOS
+.DS_Store
+
+# Other
 .python-version

@@ -18,6 +18,7 @@ dist/
 
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints/
+test.ipynb
 
 # MyPy
 .mypy_cache/

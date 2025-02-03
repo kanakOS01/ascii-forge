@@ -1,4 +1,4 @@
-from colorama import Fore, Back, Style, init
+from colorama import Fore, init
 
 init(autoreset=True)
 
@@ -12,4 +12,5 @@ COLOR_MAP = {
     "magenta": Fore.MAGENTA,
     "cyan": Fore.CYAN,
     "white": Fore.WHITE,
+    "multi": "",
 }

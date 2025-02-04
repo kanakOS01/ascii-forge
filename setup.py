@@ -5,13 +5,17 @@ with open("README.md", "r") as f:
 
 setup(
     name="ascii-forge",
-    version="0.1",
+    version="0.3",
     author="Kanak Tanwar",
     author_email="kanaktanwarpro@gmail.com",
     description="Turn your images into ASCII art from your terminal",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/kanakOS01/ascii-forge/",
+    url="https://github.com/kanakOS01/ascii-forge",
+    project_urls={
+        "GitHub Repository": "https://github.com/kanakOS01/ascii-forge",
+        "PyPI Project Page": "https://pypi.org/project/ascii-forge/"
+    },
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",

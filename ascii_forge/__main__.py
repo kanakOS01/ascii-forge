@@ -23,6 +23,3 @@ def cli(image_path, width, invert, color, save_as_txt, save_as_png):
         click.echo(ascii_art)
     except Exception as e:
         print(str(e))
-
-    # ascii_art = image_to_ascii(image_path, width, invert, color, save_as_txt, save_as_png)
-    # click.echo(ascii_art)

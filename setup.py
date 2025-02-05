@@ -1,11 +1,11 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 with open("README.md", "r") as f:
     long_description = f.read()
 
 setup(
     name="ascii-forge",
-    version="0.3",
+    version="0.6",
     author="Kanak Tanwar",
     author_email="kanaktanwarpro@gmail.com",
     description="Turn your images into ASCII art from your terminal",
@@ -21,7 +21,7 @@ setup(
         "License :: OSI Approved :: MIT License",
     ],
     python_requires='>=3.6',
-    py_modules=["ascii_forge"],
+    packages=find_packages(),
     install_requires=[
         "Click", 
         "Pillow", 

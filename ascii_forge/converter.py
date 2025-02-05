@@ -5,7 +5,7 @@ from ascii_forge.config import ASCII_CHARS, COLOR_MAP
 
 def apply_monochrome_color(ascii_art: str, color: str) -> str:
     """Apply a single color to ASCII Art"""
-    return COLOR_MAP.get(color) + ascii_art + Style.RESET_ALL
+    return COLOR_MAP.get(color).get("colorama") + ascii_art + Style.RESET_ALL
 
 
 def image_to_ascii(
@@ -34,7 +34,7 @@ def image_to_ascii(
     w_new, h_new = image.width, image.height
 
     # logic for text output
-    if color != "multi":
+    if color != "multi" and not save_as_png:
         image = image.convert("L")
         pixels = list(image.getdata())
 
@@ -60,7 +60,7 @@ def image_to_ascii(
 
     for i in range(h_new):
         for j, (r, g, b, a) in enumerate(pixels[i * w_new : (i + 1) * w_new]):
-            fill = (r, g, b, a) if color == "multi" else None
+            fill = (r, g, b, a) if color == "multi" else COLOR_MAP.get(color).get("rgba")
             gray = int(r / 3 + g / 3 + b / 3)
             draw.text(
                 (j * CHAR_W, i * CHAR_H), font=font, text=ASCII_CHARS_USED[int(gray * INTERVAL)], fill=fill

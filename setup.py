@@ -5,7 +5,7 @@ with open("README.md", "r") as f:
 
 setup(
     name="ascii-forge",
-    version="0.8",
+    version="1.0.0",
     author="Kanak Tanwar",
     author_email="kanaktanwarpro@gmail.com",
     description="Turn your images into ASCII art from your terminal",

@@ -12,14 +12,17 @@ from ascii_forge.config import COLOR_MAP
     "-c",
     default=None,
     type=click.Choice(COLOR_MAP.keys()),
-    help="Color of ASCII output. 'multi' value only works with '--save-as-png' option",
+    help="Color of ASCII output",
 )
 @click.option("--save-as-txt", "-st", type=click.Path(), help="Save ASCII output to a .txt file")
 @click.option("--save-as-png", "-sp", type=click.Path(), help="Save ASCII output to a .png file")
 def cli(image_path, width, invert, color, save_as_txt, save_as_png):
     """Convert an IMAGE to ASCII Art"""
-    try:
-        ascii_art = image_to_ascii(image_path, width, invert, color, save_as_txt, save_as_png)
-        click.echo(ascii_art)
-    except Exception as e:
-        print(str(e))
+    # try:
+    #     ascii_art = image_to_ascii(image_path, width, invert, color, save_as_txt, save_as_png)
+    #     click.echo(ascii_art)
+    # except Exception as e:
+    #     print(str(e))
+
+    ascii_art = image_to_ascii(image_path, width, invert, color, save_as_txt, save_as_png)
+    click.echo(ascii_art)

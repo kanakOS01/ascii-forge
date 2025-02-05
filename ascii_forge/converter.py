@@ -18,9 +18,6 @@ def image_to_ascii(
 ) -> str:
     """Main functon to convert image to ASCII"""
     
-    if color == "multi" and not save_as_png:
-        raise Exception("Use 'multi' option only with '--save-as-png'/'-sp' option")
-
     image = Image.open(image_path)
     w_orig, h_orig = image.width, image.height
 
@@ -34,7 +31,7 @@ def image_to_ascii(
     w_new, h_new = image.width, image.height
 
     # logic for text output
-    if color != "multi" and not save_as_png:
+    if not save_as_png:
         image = image.convert("L")
         pixels = list(image.getdata())
 
@@ -60,7 +57,7 @@ def image_to_ascii(
 
     for i in range(h_new):
         for j, (r, g, b, a) in enumerate(pixels[i * w_new : (i + 1) * w_new]):
-            fill = (r, g, b, a) if color == "multi" else COLOR_MAP.get(color).get("rgba")
+            fill = COLOR_MAP.get(color).get("rgba") if color else (r, g, b, a)
             gray = int(r / 3 + g / 3 + b / 3)
             draw.text(
                 (j * CHAR_W, i * CHAR_H), font=font, text=ASCII_CHARS_USED[int(gray * INTERVAL)], fill=fill

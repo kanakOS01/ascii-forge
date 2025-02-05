@@ -12,6 +12,5 @@ COLOR_MAP = {
     "magenta": {"colorama": Fore.MAGENTA, "rgba": (200, 50, 200, 255)},
     "cyan": {"colorama": Fore.CYAN, "rgba": (50, 200, 255, 255)},
     "white": {"colorama": Fore.WHITE, "rgba": (230, 230, 230, 255)},
-    "multi": {"colorama": "", "rgba": ""},  # Multi varies based on image colors
 }
 

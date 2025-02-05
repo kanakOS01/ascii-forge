@@ -31,7 +31,7 @@ ascii_forge <image_path> [OPTIONS]
 |--------|------------|---------|-------------|
 | `--width` | `-w` | 100 | Width of the ASCII output (affects clarity). |
 | `--invert` | `-i` | False | Invert ASCII output. |
-| `--color` | `-c` | None | Choose a color scheme from `COLOR_MAP`. The `multi` option works only with `--save-as-png`. |
+| `--color` | `-c` | None | Choose a color scheme from `COLOR_MAP`. |
 | `--save-as-txt` | `-st` | None | Save ASCII output to a `.txt` file. |
 | `--save-as-png` | `-sp` | None | Save ASCII output to a `.png` file. |
 
@@ -52,7 +52,7 @@ ascii_forge input.jpg --invert
 ```sh
 ascii_forge input.jpg --save-as-txt output.txt
 ```
-#### Saving Output as a PNG
+#### Saving Output as a PNG (best accuracy)
 ```sh
 ascii_forge input.jpg --save-as-png output.png
 ```
